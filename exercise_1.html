@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{font-family: "Lato";}
+        body {
+            display: grid;
+            /*margin: auto;*/
+            /*margin-top: calc(50vh - 170px);*/
+            /*width: 300px; height: 300px;*/
+        }
+
+        input { border: 1px solid;}
+        td:first-child {width:100px;}
+        #example {width: 300px;}
+        #example2 {width: 400px;}
+        
+
+    </style>
+</head>
+<body>
+    <h2>Fieldset Exercises</h2>
+    
+    <p>There are some elements in HTML that rarely get used as both 
+    <br>their default appearance and functionality are less needed in 
+    <br>modern web designs.
+    </p>
+
+    <p>One such element is the &lt;fieldset&gt; element,  
+    <br>along with its child element &lt;legend&gt;.
+    </p>
+
+    <p>A &lt;fieldset&gt; element is traditionally used to group and 
+    <br> access form controls. We can visually notice the 
+    <br> grouping by the presence of a border around the 
+    <br> grouped content on the screen.
+    </p>
+
+    <p>The caption for this group is given inside the 
+    <br> &lt;legend&gt; element, that's added as the first child 
+    <br> of the &lt;fieldset&gt;
+    </p>
+
+    <fieldset id="example">
+        <legend>Login</legend>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    
+    <p>This combination of &lt;fieldset&gt; and &lt;legend&gt; 
+    <br> creates a unique ready-made 'text in border' design where 
+    <br> the caption is placed right where the border is and the 
+    <br> line of the border doesn't go through the text. The border line 
+    <br> 'breaks' when it encounters the beginning of the caption text
+    <br> and resume after the text ends.
+    </p>
+
+    <h3>Instructions</h3>
+
+    <p>In this post, we'll make use of the&lt;fieldset&gt; and &lt;legend&gt; combo 
+    <br> to create a more modern border text design that's quick and 
+    <br> easy to code and update.
+    </p>
+
+    <p>For the four borders, we need four &lt;fieldset&gt; elements, 
+    <br>each containiing a &lt;legend&gt; element inside. We add the text 
+    <br> that will appear at the borders inside the &lt;legend&gt; elements.
+    </p>
+
+    <p>To begin, we stack the &lt;fieldset&gt; elements on top of each other 
+    <br> in a grid cell and give them borders. You can stack them 
+    <br> using any way you want - it doesn't necessarily have to be a 
+    <br> grid.
+    </p>
+
+    <fieldset id='example2'><legend>Wash Your Hands</legend></fieldset>
+    <fieldset id='example2'><legend>Stay Apart</legend></fieldset>
+    <fieldset id='example2'><legend>Wear A Mask</legend></fieldset>
+    <fieldset id='example2'><legend>Stay Home</legend></fieldset>
+
+    <p>Only the top border of each &lt;fieldset&gt; element is kept visible 
+    <br>while the remaining edges are transparent since the text of the 
+    <br> &lt;legend&gt; element appears at the top border of the fieldset by default.
+    </p>
+
+    <p>Also, we give all the &lt;fieldset&gt; elements a box-sizing property 
+    <br>with a value of border-box so the width and height of the &lt;fieldset&gt; elements 
+    <br> include their border and padding sizes too. 
+    <br> Doing this later creates a leveled design, when we style the &lt;legend&gt; element.
+    </p>
+
+    <p>After this, we rotate the last three &lt;fieldset&gt; elements in 
+    <br> order to use their top borders as the side and bottom borders of our design.
+    </p>
+
+    <p>Next up is styling the &lt;legend&gt; element. The key to create 
+    <br>smooth border text is to give it a zero (or small enough) line height.
+    <br>If it has a large line height, that will displace the position of the border it's in, 
+    <br> pushing the border down. And when the border moves with the line height
+    <br>we won't be able to connect all the four sides of our design and will need 
+    <br> to readjust the borders.
+    </p>
+
+    <p>The &lt;legend&gt; element that adds the text at the bottom border of our design
+    <br> fieldset:nth-of-type(3)>legend is upside-down, because of its rotated 
+    <br>&lt;fieldset&gt; parent element. Flip that &lt;legend&gt; element vertically to show 
+    <br> its text right-side-up.
+    </p>
+
+    <p>Add an image to the first fieldset element and you get something like this</p>
+    <p><a href="trial2.html">Result</a> and <a href="trial3.html">this</a>.
+    </p>
+
+    <p>Lateral margins can move the text along the border. Left and 
+    <br> right margins with auto values will center the text, as seen above. Only the 
+    <br> left margin with an auto value will flush the text to the right, and vice versa, 
+    <br> for the right margin.
+    </p>
+    </pre>
+</body>
+</html>

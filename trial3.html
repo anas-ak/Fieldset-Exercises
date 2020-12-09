@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{font-family: "Lato";}
+        body {
+            display: grid;
+            margin: auto;
+            margin-top: calc(50vh - 170px);
+            width: 400px; height: 400px;
+        }
+        fieldset{
+            border: 10px solid transparent;
+            border-top-color: rgb(54, 69, 204);
+            box-sizing: border-box;
+            grid-area: 1 / 1;
+            padding: 15px;
+            width:auto;
+        }
+
+        /*Insert image in top fieldset*/
+        fieldset:nth-of-type(1) {
+            background: content-box center/contain no-repeat url("covid-SOPs.jpg");
+        }
+        /*Rotate to the right*/
+        fieldset:nth-of-type(2) {transform: rotate(90deg);}
+        
+        /*Rotate to bottom*/
+        fieldset:nth-of-type(3) {transform: rotate(180deg);}
+
+        /*Rotate to left*/
+        fieldset:nth-of-type(4) {transform: rotate(-90deg);}
+
+        legend {
+            font: 15pt/0;
+            color: mediumblue;
+            margin: auto;
+            padding: 0 5px 0 5px;
+        }
+
+        fieldset:nth-of-type(3)>legend {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+    <fieldset><legend>Wash Your Hands</legend></fieldset>
+    <fieldset><legend>Stay 1m Apart</legend></fieldset>
+    <fieldset><legend>Wear A Mask</legend></fieldset>
+    <fieldset><legend>Stay Home</legend></fieldset>
+
+</body>
+</html>
